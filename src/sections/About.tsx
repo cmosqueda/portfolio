@@ -15,7 +15,7 @@ export default function About() {
         <div className="m-3 sm:m-5 bg-neutral-50 hidden sm:flex"></div>
 
         {/* paragraph */}
-        <div className="mt-3 sm:mx-0 text-xs text-justify">
+        <div className="mt-3 sm:mx-0 text-sm text-justify">
           <p>
             Hi! I’m Tyne, currently pursuing an IT undergraduate program at USTP - CDO, Philippines. My interests span
             across project management, academic and creative writing, graphic design, UI/UX design, and tech solution
