@@ -25,6 +25,7 @@ import {
   SiMiro,
   SiJupyter,
   SiTailwindcss,
+  SiVite,
 } from "react-icons/si";
 
 const stacks = [
@@ -35,6 +36,7 @@ const stacks = [
   { name: "Python", Icon: DiPython },
   { name: "Java", Icon: DiJava },
   { name: "React", Icon: DiReact },
+  { name: "Vite", Icon: SiVite },
   { name: "Expo", Icon: SiExpo },
   { name: "TailwindCSS", Icon: SiTailwindcss },
   { name: "Firebase", Icon: DiFirebase },

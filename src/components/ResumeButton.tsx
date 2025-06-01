@@ -50,14 +50,14 @@ export default function ResumeButton() {
       e.preventDefault();
       expand();
     } else {
-      window.open("/assets/MosquedaChristine_CV_Resume.pdf", "_blank");
+      window.open("/tyne_portfolio/assets/personal/MosquedaChristine_CV_Resume.pdf", "_blank");
     }
   };
 
   return (
     <a
       id="resume-btn-container"
-      href="/assets/MosquedaChristine_CV_Resume.pdf"
+      href="/tyne_portfolio/assets/personal/MosquedaChristine_CV_Resume.pdf"
       onClick={handleClick}
       className={`fixed bottom-5 left-0 z-20 bg-neutral-100 border border-neutral-900 shadow-lg text-neutral-900 py-2 rounded-r-full text-xs transition-all duration-300 flex items-center overflow-hidden group ${
         visible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
