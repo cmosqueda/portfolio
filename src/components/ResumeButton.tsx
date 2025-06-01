@@ -1,4 +1,4 @@
-import myResume from "../assets/personal/MosquedaChristine_CV_Resume.pdf";
+// import myResume from "../assets/personal/MosquedaChristine_CV_Resume.pdf";
 import { useEffect, useRef, useState } from "react";
 import { FaFileAlt } from "react-icons/fa";
 
@@ -51,14 +51,14 @@ export default function ResumeButton() {
       e.preventDefault();
       expand();
     } else {
-      window.open(myResume, "_blank");
+      window.open("/tyne-portfolio/MosquedaChristine_CV_Resume.pdf", "_blank");
     }
   };
 
   return (
     <a
       id="resume-btn-container"
-      href={"../assets/personal/MosquedaChristine_CV_Resume.pdf"}
+      href={"/tyne-portfolio/MosquedaChristine_CV_Resume.pdf"}
       onClick={handleClick}
       target="_blank"
       className={`fixed bottom-5 left-0 z-20 bg-neutral-100 border border-neutral-900 shadow-lg text-neutral-900 py-2 rounded-r-full text-xs transition-all duration-300 flex items-center overflow-hidden group ${
