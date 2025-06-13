@@ -62,7 +62,7 @@ const projectsData = [
   {
     logoSrc: favicon,
     name: "Affitnity",
-    description: "A working, full-stack web prototype for a fitness app using React, Django, and PostgreSQL. (WIP)",
+    description: "A fitness app using React, Django, and PostgreSQL. (WIP)",
     link: "https://github.com/cmosqueda/affitnity-react",
   },
   {

@@ -29,12 +29,12 @@ export default function Footer() {
 
           {/* instagram */}
           <a
-            href="https://www.instagram.com/tyne.exe/profilecard/?igsh=bng5Y2cybWJxa3dk"
+            href="https://www.instagram.com/tyne.jpg/profilecard/?igsh=bng5Y2cybWJxa3dk"
             target="_blank"
             className="flex flex-row items-center hover:underline"
           >
             <BsInstagram size={20}></BsInstagram>
-            <p className="ml-1">tyne.exe</p>
+            <p className="ml-1">tyne.jpg</p>
           </a>
         </div>
       </div>
