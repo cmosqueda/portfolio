@@ -3,11 +3,11 @@ import { BsInstagram, BsFacebook, BsGithub } from "react-icons/bs";
 export default function Footer() {
   return (
     <>
-      <div className="flex flex-col sm:flex-row py-3 m-5 bg-neutral-50 text-neutral-800 items-center justify-center">
+      <div className="flex flex-col sm:flex-row py-3 m-5 bg-lvlnine text-lvlone items-center justify-center">
         <p className="font-bold text-lg">Find me on other platforms</p>
 
         {/* vertical */}
-        <div className="w-0.5 h-24 m-3 sm:m-5 bg-neutral-800 hidden sm:flex"></div>
+        <div className="w-0.5 h-24 m-3 sm:m-5 bg-lvlone hidden sm:flex"></div>
 
         {/* socials */}
         <div className="flex flex-col my-3 text-sm space-y-1">

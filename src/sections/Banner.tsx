@@ -3,6 +3,7 @@
 import whiplash from "../assets/personal/whiplash.jpg";
 
 import { useEffect, useState } from "react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 export default function Banner() {
   const phrases = [
@@ -15,6 +16,8 @@ export default function Banner() {
     "Don't stop 흔들린 채 ",
     "무리해도 can't touch that (can't touch that) ",
   ];
+
+  const { theme } = useTheme();
 
   const [text, setText] = useState("");
   const [currentPhrase, setCurrentPhrase] = useState(0);
@@ -48,16 +51,19 @@ export default function Banner() {
 
   return (
     <>
-      {/* banner container */}
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
         <img
           src={whiplash}
           alt="aespa-whiplash"
-          className="absolute inset-0 w-full h-full object-cover  -z-10 transition-all"
+          className="absolute inset-0 w-full h-full object-cover -z-10 transition-all"
         />
 
-        {/* dynamic typing text wrapper with translucent black bg */}
-        <div className="w-full bg-black/20 text-neutral-50 h-full flex flex-col justify-between p-6">
+        {/* Dynamically styled container based on theme */}
+        <div
+          className={`w-full h-full flex flex-col justify-between p-6 txtcolor transition-all duration-300 ${
+            theme === "dark" ? "bg-black/20" : "bg-white/10"
+          }`}
+        >
           {/* welcome text */}
           <p className="text-5xl absolute bottom-60 left-10 font-bold self-start mt-20 ml-4 sm:ml-10 after:content-['|'] after:ml-1 after:animate-pulse">
             {text}

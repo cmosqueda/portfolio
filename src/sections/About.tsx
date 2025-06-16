@@ -7,12 +7,12 @@ export default function About() {
 
   return (
     <div className="flex flex-col justify-center items-center mx-5">
-      <div className="flex w-full h-3 sm:h-5 my-3 bg-neutral-600"></div>
+      <div className="flex w-full h-3 sm:h-5 my-3 bg-lvlfour"></div>
 
       {/* about */}
-      <div className="flex flex-col sm:flex-row py-5 text-neutral-50 items-center mx-3 sm:mx-10 text-center sm:text-start">
+      <div className="flex flex-col sm:flex-row py-5 txtcolor items-center mx-3 sm:mx-10 text-center sm:text-start">
         <p className="text-3xl font-bold text-end">ABOUT TYNE</p>
-        <div className="m-3 sm:m-5 bg-neutral-50 hidden sm:flex"></div>
+        <div className="m-3 sm:m-5 hidden sm:flex"></div>
 
         {/* paragraph */}
         <div className="mt-3 sm:mx-0 text-sm text-justify">
@@ -52,7 +52,7 @@ export default function About() {
 
           <button
             onClick={toggleReadMore}
-            className=" mt-3 italic text-neutral-50/70 hover:text-neutral-50 hover:underline transition duration-200"
+            className=" mt-3 italic text-lvlsix hover:text-lvlseven hover:underline transition duration-200"
           >
             {isExpanded ? "(Read less)" : "(Read more ...)"}
           </button>

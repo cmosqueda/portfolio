@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
+import { useTheme } from "@/contexts/ThemeContext";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const { theme } = useTheme();
 
   useEffect(() => {
     function handleScroll() {
@@ -14,13 +16,24 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const getHeaderClasses = () => {
+    const baseClasses =
+      "p-2 backdrop-blur-md border txtcolor transition-all duration-300 text-xs sm:text-base flex flex-col sm:flex-row justify-between";
+
+    if (theme === "dark") {
+      return `${baseClasses} ${
+        scrolled ? "bg-white/20  border-black/10 shadow-md" : "bg-black/20  m-5 rounded-3xl shadow-lg border-white/20"
+      }`;
+    } else {
+      return `${baseClasses} ${
+        scrolled ? "bg-black/20  border-white/10 shadow-md" : "bg-white/20  m-5 rounded-3xl shadow-lg border-black/20"
+      }`;
+    }
+  };
+
   return (
     <div className="fixed top-0 w-full z-20">
-      <div
-        className={`p-2 ${
-          scrolled ? "shadow-md bg-white/20" : "m-5 rounded-3xl shadow-lg "
-        } bg-black/20 backdrop-blur-md border border-white/20 text-neutral-50 flex flex-col sm:flex-row justify-between text-xs sm:text-base transition-all duration-300`}
-      >
+      <div className={getHeaderClasses()}>
         {/* email */}
         <a
           href="mailto:mosqueda.christinereisa04@gmail.com"

@@ -1,20 +1,73 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 @import "tailwindcss";
 
-:root {
-  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
-  font-family: "JetBrains Mono", Courier, monospace;
-  line-height: 1.5;
-  font-weight: 400;
+@theme {
+  --color-lvlone: oklch(20.5% 0 0);
+  --color-lvltwo: oklch(26.9% 0 0);
+  --color-lvlthree: oklch(37.1% 0 0);
+  --color-lvlfour: oklch(43.9% 0 0);
+  --color-lvlfive: oklch(55.6% 0 0);
+  --color-lvlsix: oklch(70.8% 0 0);
+  --color-lvlseven: oklch(87% 0 0);
+  --color-lvleight: oklch(92.2% 0 0);
+  --color-lvlnine: oklch(97% 0 0);
+  --color-lvlten: oklch(98.5% 0 0);
+}
 
-  /* color-scheme: light dark; */
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #262626;
+@layer base {
+  :root {
+    /* font-family: Avenir, Helvetica, Arial, sans-serif; */
+    font-family: "JetBrains Mono", Courier, monospace;
+    line-height: 1.5;
+    font-weight: 400;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /* color-scheme: light dark; */
+    /* color: rgba(255, 255, 255, 0.87); */
+    background-color: var(--color-neutral-800);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* color palette */
+
+    --color-lvlone: oklch(20.5% 0 0);
+    --color-lvltwo: oklch(26.9% 0 0);
+    --color-lvlthree: oklch(37.1% 0 0);
+    --color-lvlfour: oklch(43.9% 0 0);
+    --color-lvlfive: oklch(55.6% 0 0);
+    --color-lvlsix: oklch(70.8% 0 0);
+    --color-lvlseven: oklch(87% 0 0);
+    --color-lvleight: oklch(92.2% 0 0);
+    --color-lvlnine: oklch(97% 0 0);
+    --color-lvlten: oklch(98.5% 0 0);
+  }
+
+  [data-theme="light"] {
+    background-color: var(--color-neutral-200);
+
+    --color-lvlone: oklch(98.5% 0 0);
+    --color-lvltwo: oklch(97% 0 0);
+    --color-lvlthree: oklch(92.2% 0 0);
+    --color-lvlfour: oklch(87% 0 0);
+    --color-lvlfive: oklch(70.8% 0 0);
+    --color-lvlsix: oklch(55.6% 0 0);
+    --color-lvlseven: oklch(43.9% 0 0);
+    --color-lvleight: oklch(37.1% 0 0);
+    --color-lvlnine: oklch(26.9% 0 0);
+    --color-lvlten: oklch(20.5% 0 0);
+  }
+}
+
+@layer components {
+  .txtcolor {
+    color: var(--color-lvlten);
+  }
+
+  .bgcolor {
+    background-color: var(--color-lvltwo);
+  }
 }
 
 /* flip card */

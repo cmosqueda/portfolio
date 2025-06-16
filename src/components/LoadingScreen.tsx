@@ -5,7 +5,7 @@ export default function LoadingScreen({ fadeOut }: { fadeOut: boolean }) {
   return (
     <div
       className={clsx(
-        "fixed inset-0 z-50 flex items-center justify-center bg-neutral-900 transition-opacity duration-700",
+        "fixed inset-0 z-50 flex items-center justify-center transition-opacity duration-700",
         fadeOut ? "opacity-0 pointer-events-none" : "opacity-100"
       )}
     >

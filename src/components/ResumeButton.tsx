@@ -61,7 +61,7 @@ export default function ResumeButton() {
       href={"/tyne-portfolio/MosquedaChristine_CV_Resume.pdf"}
       onClick={handleClick}
       target="_blank"
-      className={`fixed bottom-5 left-0 z-20 bg-neutral-100 border border-neutral-900 shadow-lg text-neutral-900 py-2 rounded-r-full text-xs transition-all duration-300 flex items-center overflow-hidden group ${
+      className={`fixed bottom-5 left-0 z-20 bg-lvlnine border border-lvlone shadow-lg text-lvlone py-2 rounded-r-full text-xs transition-all duration-300 flex items-center overflow-hidden group ${
         visible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
       } ${expanded ? "max-w-[180px] px-3" : "max-w-[40px] px-2"}`}
     >

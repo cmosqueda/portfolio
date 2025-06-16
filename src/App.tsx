@@ -11,6 +11,7 @@ import Banner from "./sections/Banner";
 import IdCard from "./sections/IdCard";
 import Projects from "./sections/Projects";
 import TechStacks from "./sections/TechStacks";
+import ToggleThemeButton from "./components/ToggleThemeButton";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -35,6 +36,7 @@ function App() {
       <Header></Header>
       <GoToTopButton></GoToTopButton>
       <ResumeButton></ResumeButton>
+      <ToggleThemeButton></ToggleThemeButton>
       <Banner></Banner>
       <IdCard></IdCard>
       <About></About>

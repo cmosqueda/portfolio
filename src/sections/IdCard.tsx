@@ -10,7 +10,7 @@ export default function IdCard() {
   return (
     <div className="my-10">
       <div className="flex flex-col w-full items-center">
-        <p className="text-3xl font-bold text-neutral-100 mb-10">TYNE'S ID CARD</p>
+        <p className="text-3xl font-bold txtcolor mb-10">TYNE'S ID CARD</p>
 
         {/* Flip container */}
         <div
@@ -20,10 +20,10 @@ export default function IdCard() {
           <div
             className={`relative w-full h-full transition-transform duration-700 transform-style preserve-3d ${
               flipped ? "rotate-y-180" : ""
-            } shadow-lg ring-1 ring-neutral-300 rounded-md`}
+            } rounded-md`}
           >
             {/* Front side */}
-            <div className="absolute w-full h-full flex flex-col sm:flex-row items-center justify-center bg-neutral-100 backface-hidden rounded-md">
+            <div className="absolute w-full h-full flex flex-col sm:flex-row items-center justify-center border bg-neutral-100 backface-hidden rounded-md">
               {/* photo and barcode */}
               <div className="flex flex-col mt-10 sm:my-10">
                 <img
@@ -79,7 +79,7 @@ export default function IdCard() {
             </div>
 
             {/* Back side */}
-            <div className="flex flex-col absolute w-full h-full items-center justify-center bg-neutral-900 text-neutral-50 text-xl  backface-hidden rotate-y-180 rounded-md">
+            <div className="border flex flex-col absolute w-full h-full items-center justify-center bgcolor txtcolor text-xl  backface-hidden rotate-y-180 rounded-md">
               <LuConstruction size={60}></LuConstruction>
               <p className="m-5 text-center">Bruh this still under construction... Come back some other time.</p>
             </div>

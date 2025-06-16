@@ -80,7 +80,7 @@ export default function Projects() {
         {/* sub container */}
         <div className="flex flex-col my-5 items-center mx-5">
           {/* title */}
-          <p className="text-neutral-50 text-3xl font-bold">PROJECTS</p>
+          <p className="txtcolor text-3xl font-bold">PROJECTS</p>
 
           {/* outer layout */}
           <div className="my-3 mx-3 text-sm">
@@ -92,7 +92,7 @@ export default function Projects() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-50 flex flex-col flex-grow items-center text-center border rounded-lg p-5 bg-neutral-900 hover:bg-neutral-200 hover:text-neutral-900 hover:shadow-xl transition-all w-auto sm:w-[260px] h-auto cursor-pointer"
+                  className="txtcolor flex flex-col flex-grow items-center text-center border rounded-lg p-5 bg-lvlone hover:bg-lvlnine hover:text-lvlone hover:shadow-xl transition-all w-auto sm:w-[260px] h-auto cursor-pointer"
                 >
                   <img
                     src={project.logoSrc}
@@ -108,7 +108,7 @@ export default function Projects() {
             </div>
           </div>
 
-          <div className="flex w-full h-3 sm:h-5 my-3 bg-neutral-300"></div>
+          <div className="flex w-full h-3 sm:h-5 my-3 bg-lvlsix"></div>
         </div>
       </div>
     </>
