@@ -1,6 +1,7 @@
 // import aespaWhiplash from "../assets/personal/aespa_whiplash_1.gif";
 // import aespaWhip from "../assets/personal/aespa-whiplash-2.gif";
 import whiplash from "../assets/personal/whiplash.jpg";
+import whiplashtwo from "../assets/personal/whiplashdark.jfif";
 
 import { useEffect, useState } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -52,8 +53,9 @@ export default function Banner() {
   return (
     <>
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* THIS BANNER HERE */}
         <img
-          src={whiplash}
+          src={theme === "light" ? whiplash : whiplashtwo}
           alt="aespa-whiplash"
           className="absolute inset-0 w-full h-full object-cover -z-10 transition-all"
         />
@@ -61,7 +63,7 @@ export default function Banner() {
         {/* Dynamically styled container based on theme */}
         <div
           className={`w-full h-full flex flex-col justify-between p-6 txtcolor transition-all duration-300 ${
-            theme === "dark" ? "bg-black/20" : "bg-white/10"
+            theme === "dark" ? "bg-black/30" : "bg-white/10"
           }`}
         >
           {/* welcome text */}

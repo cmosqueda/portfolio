@@ -7,7 +7,7 @@ export default function About() {
 
   return (
     <div className="flex flex-col justify-center items-center mx-5">
-      <div className="flex w-full h-3 sm:h-5 my-3 bg-lvlfour"></div>
+      {/* <div className="flex w-full h-3 sm:h-5 my-3 bg-lvlfour"></div> */}
 
       {/* about */}
       <div className="flex flex-col sm:flex-row py-5 txtcolor items-center mx-3 sm:mx-10 text-center sm:text-start">

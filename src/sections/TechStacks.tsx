@@ -78,7 +78,7 @@ export default function TechStacks() {
           </div>
         </div>
 
-        <div className="flex w-full h-3 sm:h-5 my-3 bg-lvlfive"></div>
+        {/* <div className="flex w-full h-3 sm:h-5 my-3 bg-lvlfour"></div> */}
       </div>
     </>
   );

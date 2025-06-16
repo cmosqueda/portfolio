@@ -85,14 +85,15 @@ export default function Projects() {
           {/* outer layout */}
           <div className="my-3 mx-3 text-sm">
             {/* projects wrapper */}
-            <div className="flex flex-wrap gap-2 my-4 max-w-7xl mx-auto overflow-y-auto">
+            {/* THIS WRAPPER */}
+            <div className="flex flex-wrap gap-2 my-4  mx-auto overflow-y-auto">
               {projectsData.map((project, index) => (
                 <a
                   key={index}
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="txtcolor flex flex-col flex-grow items-center text-center border rounded-lg p-5 bg-lvlone hover:bg-lvlnine hover:text-lvlone hover:shadow-xl transition-all w-auto sm:w-[260px] h-auto cursor-pointer"
+                  className="txtcolor flex flex-col flex-grow items-center text-center border rounded-lg p-5 bg-lvlone hover:bg-lvlseven hover:text-lvlone hover:shadow-xl transition-all w-auto sm:w-[260px] h-auto cursor-pointer"
                 >
                   <img
                     src={project.logoSrc}
@@ -108,7 +109,7 @@ export default function Projects() {
             </div>
           </div>
 
-          <div className="flex w-full h-3 sm:h-5 my-3 bg-lvlsix"></div>
+          {/* <div className="flex w-full h-3 sm:h-5 my-3 bg-lvlfour"></div> */}
         </div>
       </div>
     </>
