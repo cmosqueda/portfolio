@@ -11,6 +11,7 @@ import {
   DiNodejs,
   DiDjango,
   DiGithub,
+  DiMarkdown,
 } from "react-icons/di";
 import {
   SiTypescript,
@@ -54,6 +55,7 @@ const stacks = [
   { name: "Trello", Icon: SiTrello },
   { name: "Miro", Icon: SiMiro },
   { name: "Jupyter", Icon: SiJupyter },
+  { name: "Markdown", Icon: DiMarkdown },
 ];
 
 export default function TechStacks() {

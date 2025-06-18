@@ -51,29 +51,31 @@ export default function ResumeButton() {
       e.preventDefault();
       expand();
     } else {
-      window.open("/tyne-portfolio/MosquedaChristine_CV_Resume.pdf", "_blank");
+      // window.open("/tyne-portfolio/MosquedaChristine_CV_Resume.pdf", "_blank");
+      collapse();
     }
   };
 
   return (
-    <a
+    <span
       id="resume-btn-container"
-      href={"/tyne-portfolio/MosquedaChristine_CV_Resume.pdf"}
       onClick={handleClick}
-      target="_blank"
-      className={`fixed bottom-5 left-0 z-20 bg-lvlnine border border-lvlone shadow-lg text-lvlone py-2 rounded-r-full text-xs transition-all duration-300 flex items-center overflow-hidden group ${
+      // target="_blank"
+      className={`fixed bottom-5 left-0 z-20 bg-lvlnine border border-lvlone shadow-lg cursor-pointer text-lvlone py-2 rounded-r-full text-xs transition-all duration-300 flex items-center overflow-hidden group ${
         visible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
       } ${expanded ? "max-w-[180px] px-3" : "max-w-[40px] px-2"}`}
     >
       <span className={`transition-transform duration-500 text-base ${expanded ? "rotate-180" : ""}`}>→</span>
-      <span
+      <a
+        href="/tyne-portfolio/MosquedaChristine_CV_Resume.pdf"
+        target="_blank"
         className={`ml-2 whitespace-nowrap flex items-center gap-1 transition-all duration-500 ${
           expanded ? "opacity-100 max-w-[140px]" : "opacity-0 max-w-0"
         }`}
       >
         <FaFileAlt className="text-sm" />
         View Resume
-      </span>
-    </a>
+      </a>
+    </span>
   );
 }

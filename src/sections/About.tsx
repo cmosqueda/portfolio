@@ -52,7 +52,7 @@ export default function About() {
 
           <button
             onClick={toggleReadMore}
-            className=" mt-3 italic text-lvlsix hover:text-lvlseven hover:underline transition duration-200"
+            className=" mt-3 italic text-lvlsix hover:text-lvlseven cursor-pointer hover:underline transition duration-200"
           >
             {isExpanded ? "(Read less)" : "(Read more ...)"}
           </button>
