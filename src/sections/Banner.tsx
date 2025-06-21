@@ -25,7 +25,7 @@ export default function Banner() {
           <p className="text-lg sm:text-2xl">
             An aspiring{" "}
             <i>
-              <strong>system analyst.</strong>
+              <strong>systems analyst.</strong>
             </i>
           </p>
           {/* <hr className="border-2" /> */}

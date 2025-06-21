@@ -83,7 +83,7 @@ export default function IdCard() {
                 <p className="text-center text-2xl font-black">ABOUT ME</p>
                 <p className="text-xs">
                   Hi! I’m Tyne and I'm currently studying at USTP - CDO, Philippines. Although I aspire to become a
-                  system analyst, my curiosity and eagerness to learn doesn't end there. My experience in the academe
+                  systems analyst, my curiosity and eagerness to learn doesn't end there. My experience in the academe
                   molded me to become versatile and flexible—progressing with different skillsets from technical writing
                   and project management to frontend development and design.
                 </p>
