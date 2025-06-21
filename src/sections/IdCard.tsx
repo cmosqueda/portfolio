@@ -2,8 +2,6 @@ import { useState } from "react";
 import myFace from "../assets/personal/myface.jpg";
 import clickCard from "../assets/personal/clickCard.png";
 
-import { LuConstruction } from "react-icons/lu";
-
 export default function IdCard() {
   const [flipped, setFlipped] = useState(false);
 
@@ -79,9 +77,21 @@ export default function IdCard() {
             </div>
 
             {/* Back side */}
-            <div className="border flex flex-col absolute w-full h-full items-center justify-center bgcolor txtcolor text-xl  backface-hidden rotate-y-180 rounded-md">
-              <LuConstruction size={60}></LuConstruction>
-              <p className="m-5 text-center">Bruh this still under construction... Come back some other time.</p>
+            <div className="bg-neutral-100 border flex flex-col absolute w-full h-full items-center justify-center bgcolor txtcolor  backface-hidden rotate-y-180 rounded-md">
+              {/* about text */}
+              <div className="m-5 text-neutral-900 space-y-5">
+                <p className="text-center text-2xl font-black">ABOUT ME</p>
+                <p className="text-xs">
+                  Hi! I’m Tyne and I'm currently studying at USTP - CDO, Philippines. Although I aspire to become a
+                  system analyst, my curiosity and eagerness to learn doesn't end there. My experience in the academe
+                  molded me to become versatile and flexible—progressing with different skillsets from technical writing
+                  and project management to frontend development and design.
+                </p>
+                <p className="text-xs">
+                  Right now, I'm on a mission to further expand my skills while studying, exploring deeper on full-stack
+                  development, machine learning, and quality assurance testing.
+                </p>
+              </div>
             </div>
           </div>
         </div>
