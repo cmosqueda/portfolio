@@ -3,7 +3,7 @@ import { BsInstagram, BsFacebook, BsGithub } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
 
 export default function Footer() {
-  const formRef = useRef();
+  const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState("idle");
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function Footer() {
     }
   }, [status]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("sending");
 
@@ -24,13 +24,13 @@ export default function Footer() {
       .sendForm(
         import.meta.env.VITE_EMAIL_JS_SERVICE_ID,
         import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID,
-        formRef.current,
+        formRef.current!,
         import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY
       )
       .then(
         () => {
           setStatus("success");
-          formRef.current.reset();
+          formRef.current?.reset();
         },
         (error) => {
           console.error("EmailJS Error:", error);
