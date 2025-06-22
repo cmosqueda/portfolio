@@ -21,7 +21,7 @@ export default function Banner() {
         {/* text */}
         <div className="text-center text-lvlnine space-y-5 m-5">
           <p className="text-xs sm:text-base">Hello, world! I am</p>
-          <p className=" font-black uppercase text-7xl sm:text-8xl">Tyne Mosqueda</p>
+          <p className=" font-black uppercase text-6xl sm:text-8xl">Tine Mosqueda</p>
           <p className="text-lg sm:text-2xl">
             An aspiring{" "}
             <i>

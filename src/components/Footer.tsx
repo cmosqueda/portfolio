@@ -41,11 +41,11 @@ export default function Footer() {
 
   return (
     <>
-      <div className="flex flex-col sm:flex-row sm:justify-between p-10 bg-lvleight text-lvlone space-y-6 sm:space-y-0 sm:items-start">
+      <div className="flex flex-col sm:flex-row sm:justify-between p-8 bg-lvleight text-lvlone space-y-6 sm:space-y-0 sm:items-start">
         {/* socials */}
         <div>
           <p className="font-bold text-lg mb-2">Find me on other platforms</p>
-          <div className="flex flex-col text-sm space-y-3">
+          <div className="flex flex-col text-sm space-y-2">
             <a href="https://github.com/cmosqueda" target="_blank" className="flex items-center hover:underline">
               <BsGithub size={20} />
               <p className="ml-1">cmosqueda</p>

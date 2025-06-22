@@ -1,6 +1,6 @@
 import { useState } from "react";
 import myFace from "../assets/personal/myface.jpg";
-import clickCard from "../assets/personal/clickCard.png";
+// import clickCard from "../assets/personal/clickCard.png";
 
 export default function IdCard() {
   const [flipped, setFlipped] = useState(false);
@@ -8,7 +8,7 @@ export default function IdCard() {
   return (
     <div className="my-10">
       <div className="flex flex-col w-full items-center">
-        <p className="text-3xl font-bold txtcolor mb-10">TYNE'S ID CARD</p>
+        <p className="text-3xl font-bold txtcolor mb-10">TINE'S ID CARD</p>
 
         {/* Flip container */}
         <div
@@ -29,22 +29,25 @@ export default function IdCard() {
                   alt="myface"
                   className="object-cover w-32 h-32 sm:w-40 sm:h-40 border border-neutral-900 rounded-sm"
                 />
+
                 <img
                   className="w-32 sm:w-40 object-cover my-3"
-                  alt="Barcode"
-                  src="https://barcode.tec-it.com/barcode.ashx?data=tyne&translate-esc=on&color=0a0a0a&bgcolor=f5f5f5"
+                  alt="Barcode Generator TEC-IT"
+                  src="https://barcode.tec-it.com/barcode.ashx?data=tine-mosqueda&translate-esc=on"
                 />
               </div>
 
               {/* details */}
               <div className="flex flex-col w-4/5 sm:w-2/5 sm:ml-5 mx-0 my-3 text-neutral-950 text-sm">
-                <img src={clickCard} alt="clickCard" />
+                {/* <img src={clickCard} alt="clickCard" /> */}
+                <hr className="border border-neutral-950 border-dashed" />
+                <hr className="border border-neutral-950 border-dashed mt-1" />
 
                 <div className="flex flex-row w-full justify-between my-3">
                   <div className="flex flex-col">
                     <div className="flex flex-col">
                       <p>NAME</p>
-                      <p className="font-bold">TYNE</p>
+                      <p className="font-bold">TINE</p>
                     </div>
                     <div className="flex flex-col my-2">
                       <p>SCHOOL</p>
@@ -82,7 +85,7 @@ export default function IdCard() {
               <div className="m-5 text-neutral-900 space-y-5">
                 <p className="text-center text-2xl font-black">ABOUT ME</p>
                 <p className="text-xs">
-                  Hi! I’m Tyne and I'm currently studying at USTP - CDO, Philippines. Although I aspire to become a
+                  Hi! I’m Tine and I'm currently studying at USTP - CDO, Philippines. Although I aspire to become a
                   systems analyst, my curiosity and eagerness to learn doesn't end there. My experience in the academe
                   molded me to become versatile and flexible—progressing with different skillsets from technical writing
                   and project management to frontend development and design.
