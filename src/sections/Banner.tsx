@@ -20,7 +20,7 @@ export default function Banner() {
 `);
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center p-6  text-white space-y-8">
+    <section className="min-h-screen flex flex-col items-center justify-center p-6 my-20 text-white space-y-8">
       {/* Dual display container */}
       <div className="flex flex-col sm:flex-row gap-8 w-full max-w-6xl">
         {/* Input box */}
