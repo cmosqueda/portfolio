@@ -11,9 +11,11 @@ const skillset = [
 export default function Banner() {
   const [htmlCode, setHtmlCode] = useState(
     `<!-- A simple HTML playground that you can try :D - Tine -->
-
+<p style="font-size:1.25rem;">
+  Hello, World! I'm
+</p>
 <h1 style="font-size:2.5rem; font-weight:800;">
-  Hello, I'm Tine!
+  Tine Mosqueda
 </h1>
 <p style="font-size:1.25rem;">
   An aspiring
