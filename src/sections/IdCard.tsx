@@ -45,13 +45,13 @@ export default function IdCard() {
                   <div className="flex flex-col">
                     <p>BIRTHDATE</p>
                     <p className="font-bold">06.04.200X</p>
-                    <p className="my-2">SCHOOL</p>
+                    <p className="mt-2">SCHOOL</p>
                     <p className="font-bold">USTP</p>
                   </div>
                   <div className="flex flex-col">
                     <p>MBTI</p>
                     <p className="font-bold">INFJ</p>
-                    <p className="my-2">PROGRAM</p>
+                    <p className="mt-2">PROGRAM</p>
                     <p className="font-bold">BSIT</p>
                   </div>
                 </div>
