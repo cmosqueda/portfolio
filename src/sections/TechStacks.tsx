@@ -70,7 +70,7 @@ export default function TechStacks() {
               {stacks.map(({ name, Icon }, index) => (
                 <div
                   key={index}
-                  className="bg-lvlone flex flex-grow flex-row p-3 items-center justify-center border rounded-lg hover:bg-lvlfour hover:shadow-2xl shadow-lvlfour transition-all"
+                  className="bg-lvlone flex flex-grow flex-row p-3 items-center justify-center border border-lvlfive/50 rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:bg-lvlfive/20"
                 >
                   <Icon className="w-6 h-6"></Icon>
                   <p className="ml-3">{name}</p>

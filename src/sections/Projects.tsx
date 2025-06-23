@@ -83,17 +83,17 @@ export default function Projects() {
           <p className="txtcolor text-3xl font-bold">PROJECTS</p>
 
           {/* outer layout */}
-          <div className="my-3 mx-3 text-sm">
+          <div className=" text-sm">
             {/* projects wrapper */}
             {/* THIS WRAPPER */}
-            <div className="flex flex-wrap gap-2 my-4  mx-auto overflow-y-auto">
+            <div className="flex flex-wrap gap-4 my-10 mx-3">
               {projectsData.map((project, index) => (
                 <a
                   key={index}
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="txtcolor flex flex-col flex-grow items-center text-center border rounded-lg p-5 bg-lvlone hover:bg-lvlseven hover:text-lvlone hover:shadow-xl transition-all w-auto sm:w-[260px] h-auto cursor-pointer"
+                  className="txtcolor flex flex-col flex-grow items-center text-center border border-lvlfive/50 rounded-lg p-5 bg-lvlone w-auto sm:w-[260px] h-auto cursor-pointer shadow transition-transform duration-300 hover:scale-105 hover:bg-lvlfive/20"
                 >
                   <img
                     src={project.logoSrc}

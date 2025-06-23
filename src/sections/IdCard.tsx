@@ -13,7 +13,7 @@ export default function IdCard() {
         {/* Flip container */}
         <div
           onClick={() => setFlipped(!flipped)}
-          className="cursor-pointer perspective md:w-3/6 w-5/6 transition-all h-[600px] sm:h-[350px]"
+          className="cursor-pointer perspective md:w-3/6 w-5/6 transition-all h-[500px] sm:h-[350px]"
         >
           <div
             className={`relative w-full h-full transition-transform duration-700 transform-style preserve-3d ${
