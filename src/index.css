@@ -83,3 +83,7 @@
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+
+@plugin 'tailwind-scrollbar' {
+  nocompatible: true;
+}

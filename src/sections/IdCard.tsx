@@ -1,9 +1,9 @@
 import { useState } from "react";
 import myFace from "../assets/personal/myface.jpg";
-// import clickCard from "../assets/personal/clickCard.png";
 
 export default function IdCard() {
   const [flipped, setFlipped] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); // new state
 
   return (
     <div className="my-10">
@@ -23,65 +23,52 @@ export default function IdCard() {
             {/* Front side */}
             <div className="absolute w-full h-full flex flex-col sm:flex-row items-center justify-center border bg-neutral-100 backface-hidden rounded-md">
               {/* photo and barcode */}
-              <div className="flex flex-col mt-10 sm:my-10">
+              <div className="flex flex-col mt-10 sm:my-10 items-center">
                 <img
                   src={myFace}
                   alt="myface"
-                  className="object-cover w-32 h-32 sm:w-40 sm:h-40 border border-neutral-900 rounded-sm"
+                  onClick={(e) => {
+                    e.stopPropagation(); // prevent flip when clicking image
+                    setIsModalOpen(true);
+                  }}
+                  className="object-cover w-32 h-32 sm:w-40 sm:h-40 border border-neutral-900 rounded-sm hover:scale-105 transition-transform duration-300"
                 />
-
-                <img
-                  className="w-32 sm:w-40 object-cover my-3"
-                  alt="Barcode Generator TEC-IT"
-                  src="https://barcode.tec-it.com/barcode.ashx?data=tine-mosqueda&translate-esc=on"
-                />
+                {/* name */}
+                <p className="mt-3 font-bold">Tine Mosqueda</p>
               </div>
 
               {/* details */}
               <div className="flex flex-col w-4/5 sm:w-2/5 sm:ml-5 mx-0 my-3 text-neutral-950 text-sm">
-                {/* <img src={clickCard} alt="clickCard" /> */}
                 <hr className="border border-neutral-950 border-dashed" />
                 <hr className="border border-neutral-950 border-dashed mt-1" />
-
                 <div className="flex flex-row w-full justify-between my-3">
                   <div className="flex flex-col">
-                    <div className="flex flex-col">
-                      <p>NAME</p>
-                      <p className="font-bold">TINE</p>
-                    </div>
-                    <div className="flex flex-col my-2">
-                      <p>SCHOOL</p>
-                      <p className="font-bold">USTP</p>
-                    </div>
+                    <p>BIRTHDATE</p>
+                    <p className="font-bold">06.04.200X</p>
+                    <p className="my-2">SCHOOL</p>
+                    <p className="font-bold">USTP</p>
                   </div>
-
                   <div className="flex flex-col">
-                    <div className="flex flex-col">
-                      <p>BIRTH DATE</p>
-                      <p className="font-bold">06.04.200X</p>
-                    </div>
-                    <div className="flex flex-col my-2">
-                      <p>PROGRAM</p>
-                      <p className="font-bold">BSIT</p>
-                    </div>
+                    <p>MBTI</p>
+                    <p className="font-bold">INFJ</p>
+                    <p className="my-2">PROGRAM</p>
+                    <p className="font-bold">BSIT</p>
                   </div>
                 </div>
-
                 <hr className="border border-neutral-950 border-dashed" />
                 <hr className="border border-neutral-950 border-dashed mt-1" />
-
-                <div className="my-3 flex flex-col">
-                  <p className="text-center italic text-xs">
-                    I drift along the gray tides—the conflicting space between muted black and blaring white, where
-                    nuance lives and extremes subside.
-                  </p>
+                <div className="items-center flex flex-col mt-3">
+                  <img
+                    className="w-32 sm:w-40 object-cover"
+                    alt="Barcode Generator TEC-IT"
+                    src="https://barcode.tec-it.com/barcode.ashx?data=tine-mosqueda&translate-esc=on"
+                  />
                 </div>
               </div>
             </div>
 
             {/* Back side */}
-            <div className="bg-neutral-100 border flex flex-col absolute w-full h-full items-center justify-center bgcolor txtcolor  backface-hidden rotate-y-180 rounded-md">
-              {/* about text */}
+            <div className="bg-neutral-100 border flex flex-col absolute w-full h-full items-center justify-center txtcolor backface-hidden rotate-y-180 rounded-md">
               <div className="m-5 text-neutral-900 space-y-5">
                 <p className="text-center text-2xl font-black">ABOUT ME</p>
                 <p className="text-xs">
@@ -92,12 +79,34 @@ export default function IdCard() {
                 </p>
                 <p className="text-xs">
                   Right now, I'm on a mission to further expand my skills while studying, exploring deeper on full-stack
-                  development, machine learning, and quality assurance testing.
+                  development, machine learning, and quality assurance testing to create meaningful and impactful
+                  solutions for the community.
                 </p>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Modal */}
+        {isModalOpen && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50"
+            onClick={() => setIsModalOpen(false)}
+          >
+            <div
+              className="bg-white p-2 rounded-lg shadow-xl max-w-[90%] sm:max-w-md"
+              onClick={(e) => e.stopPropagation()} // prevent modal close on image click
+            >
+              <img src={myFace} alt="zoomed face" className="rounded-md w-full object-contain" />
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="mt-2 text-sm text-center text-neutral-600 hover:underline w-full"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

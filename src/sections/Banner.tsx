@@ -10,8 +10,9 @@ const skillset = [
 
 export default function Banner() {
   const [htmlCode, setHtmlCode] = useState(
-    `<!-- A simple HTML playground that you can try :D - Tine -->
-<p style="font-size:1.25rem;">
+    `<!-- You can freely play around this simple HTML editor :D - Tine -->
+
+<p style="font-size:1rem;">
   Hello, World! I'm
 </p>
 <h1 style="font-size:2.5rem; font-weight:800;">
@@ -39,7 +40,7 @@ export default function Banner() {
             </div>
 
             <textarea
-              className="w-full h-50 mt-3 bg-transparent text-white outline-none resize-none"
+              className="w-full h-50 mt-3 bg-transparent text-white outline-none resize-none scrollbar-thin scrollbar-thumb-lvlfive scrollbar-track-lvleight"
               value={htmlCode}
               onChange={(e) => setHtmlCode(e.target.value)}
             />
@@ -50,7 +51,7 @@ export default function Banner() {
         <div className="flex flex-col w-full sm:w-1/2 space-y-2">
           <p className="text-sm font-semibold text-lvlnine">Output</p>
           <div
-            className="bg-white text-black rounded-lg p-5 shadow-md h-full max-h-64 overflow-auto"
+            className="bg-white text-black rounded-lg p-5 shadow-md h-full max-h-64 overflow-auto scrollbar-thin scrollbar-thumb-lvlfive scrollbar-track-lvleight"
             dangerouslySetInnerHTML={{ __html: htmlCode }}
           />
         </div>
