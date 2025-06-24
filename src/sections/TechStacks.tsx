@@ -27,6 +27,7 @@ import {
   SiJupyter,
   SiTailwindcss,
   SiVite,
+  SiJest,
 } from "react-icons/si";
 
 const stacks = [
@@ -56,6 +57,7 @@ const stacks = [
   { name: "Miro", Icon: SiMiro },
   { name: "Jupyter", Icon: SiJupyter },
   { name: "Markdown", Icon: DiMarkdown },
+  { name: "Jest", Icon: SiJest },
 ];
 
 export default function TechStacks() {

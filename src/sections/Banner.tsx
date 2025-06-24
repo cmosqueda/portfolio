@@ -12,13 +12,13 @@ export default function Banner() {
   const [htmlCode, setHtmlCode] = useState(
     `<!-- You can freely edit this HTML code :D - Tine -->
 
-<p style="font-size:1rem;">
+<p style="font-size:1.25rem;">
   Hello world! I'm
 </p>
-<h1 style="font-size:2.5rem; font-weight:800;">
+<p style="font-size:2.5rem; font-weight:800; text-transform: uppercase;">
   Tine Mosqueda
-</h1>
-<p style="font-size:1.25rem;">
+</p>
+<p style="font-size:1.5rem;">
   An aspiring
   <i><strong>Systems Analyst</strong></i>
 </p>
@@ -26,7 +26,7 @@ export default function Banner() {
   href="/portfolio/Mosqueda_Christine_CV.pdf"
   target="_blank"
   style="font-size:1rem; color:blue; text-decoration:underline;">
-  <i>Click this to view my CV</i>
+    <i>View my CV</i>
 </a>
 `
   );
