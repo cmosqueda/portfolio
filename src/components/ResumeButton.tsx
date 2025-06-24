@@ -61,20 +61,22 @@ export default function ResumeButton() {
       id="resume-btn-container"
       onClick={handleClick}
       // target="_blank"
-      className={`fixed bottom-5 left-0 z-20 bg-lvlnine border border-lvlone shadow-lg cursor-pointer text-lvlone py-2 rounded-r-full text-xs transition-all duration-300 flex items-center overflow-hidden group ${
+      className={`fixed bottom-5 left-0 z-20 bg-lvlone border border-lvlnine border-l-0 shadow-lg cursor-pointer text-lvlnine py-3 rounded-r-full text-xs transition-all duration-300 flex items-center overflow-hidden group ${
         visible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
       } ${expanded ? "max-w-[180px] px-3" : "max-w-[40px] px-2"}`}
     >
-      <span className={`transition-transform duration-500 text-base ${expanded ? "rotate-180" : ""}`}>→</span>
+      <span className={`transition-transform duration-500 text-base ${expanded ? "rotate-180" : ""}`}>
+        <FaFileAlt className="text-lg" />
+      </span>
       <a
-        href="/tyne-portfolio/MosquedaChristine_CV_Resume.pdf"
+        href="/portfolio/Mosqueda_Christine_CV.pdf"
         target="_blank"
         className={`ml-2 whitespace-nowrap flex items-center gap-1 transition-all duration-500 ${
           expanded ? "opacity-100 max-w-[140px]" : "opacity-0 max-w-0"
         }`}
       >
-        <FaFileAlt className="text-sm" />
-        View Resume
+        {/* <FaFileAlt className="text-sm" /> */}
+        View CV
       </a>
     </span>
   );

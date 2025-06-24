@@ -10,10 +10,10 @@ const skillset = [
 
 export default function Banner() {
   const [htmlCode, setHtmlCode] = useState(
-    `<!-- You can freely play around this simple HTML editor :D - Tine -->
+    `<!-- You can freely edit this HTML code :D - Tine -->
 
 <p style="font-size:1rem;">
-  Hello, World! I'm
+  Hello world! I'm
 </p>
 <h1 style="font-size:2.5rem; font-weight:800;">
   Tine Mosqueda
@@ -22,6 +22,12 @@ export default function Banner() {
   An aspiring
   <i><strong>Systems Analyst</strong></i>
 </p>
+<a
+  href="/portfolio/Mosqueda_Christine_CV.pdf"
+  target="_blank"
+  style="font-size:1rem; color:blue; text-decoration:underline;">
+  <i>Click this to view my CV</i>
+</a>
 `
   );
 
@@ -40,7 +46,7 @@ export default function Banner() {
             </div>
 
             <textarea
-              className="w-full h-50 mt-3 bg-transparent text-white outline-none resize-none scrollbar-thin scrollbar-thumb-lvlfive scrollbar-track-lvleight"
+              className="w-full h-50 mt-3 bg-transparent text-neutral-100 outline-none resize-none scrollbar-thin scrollbar-thumb-lvlfive scrollbar-track-lvleight"
               value={htmlCode}
               onChange={(e) => setHtmlCode(e.target.value)}
             />

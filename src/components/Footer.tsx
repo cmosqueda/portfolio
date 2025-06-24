@@ -44,7 +44,7 @@ export default function Footer() {
       <div className="flex flex-col sm:flex-row sm:justify-between p-8 bg-lvleight text-lvlone space-y-6 sm:space-y-0 sm:items-start">
         {/* socials */}
         <div>
-          <p className="font-bold text-lg mb-2">Find me on other platforms</p>
+          <p className="font-bold text-lg mb-2">Let's connect!</p>
           <div className="flex flex-col text-sm space-y-2">
             <a href="https://github.com/cmosqueda" target="_blank" className="flex items-center hover:underline">
               <BsGithub size={20} />
@@ -110,7 +110,7 @@ export default function Footer() {
       </div>
       {/* copyright */}
       <div className="bg-lvleight text-center text-xs text-lvlone py-3 border-t border-lvlone/20">
-        © {new Date().getFullYear()} Tyne. All rights reserved.
+        © {new Date().getFullYear()} Tine Mosqueda. All rights reserved.
       </div>
     </>
   );
