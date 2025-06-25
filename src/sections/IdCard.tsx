@@ -72,15 +72,17 @@ export default function IdCard() {
               <div className="m-5 text-neutral-900 space-y-5">
                 <p className="text-center text-2xl font-black">ABOUT ME</p>
                 <p className="text-xs">
-                  Hi! I’m Tine and I'm currently studying at USTP - CDO, Philippines. Although I aspire to become a
-                  systems analyst, my curiosity and eagerness to learn doesn't end there. My experience in the academe
-                  molded me to become versatile and flexible—progressing with different skillsets from technical writing
-                  and project management to frontend development and design.
+                  Hi! I’m Tine and I'm currently studying at USTP - CDO, Philippines. I aspire to follow the path of a
+                  systems analyst because I am particularly drawn towards the intersection of business aspects in the IT
+                  industry. Although I have a clear direction in mind, my curiosity and passion to learn doesn't end
+                  there. My experience in the academe has shaped me to become a flexible and versatile
+                  individual—progressing with different skillsets from technical writing and project management to
+                  frontend development and design.
                 </p>
                 <p className="text-xs">
-                  Right now, I'm on a mission to further expand my skills while studying, exploring deeper on full-stack
-                  development, machine learning, and quality assurance testing to create meaningful and impactful
-                  solutions for the community.
+                  Right now, I'm on a mission to expand my skills while studying, exploring deeper on full-stack
+                  development, machine learning, and quality assurance testing to build solutions that create real
+                  impact in the community.
                 </p>
               </div>
             </div>

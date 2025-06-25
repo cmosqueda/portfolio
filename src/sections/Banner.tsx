@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 const skillset = [
-  { skill: "Project Management" },
   { skill: "Technical Writing" },
   { skill: "Design" },
-  { skill: "Frontend Development" },
+  { skill: "Creatives" },
+  { skill: "Web Development" },
   { skill: "Quality Assurance" },
 ];
 
@@ -22,12 +22,6 @@ export default function Banner() {
   An aspiring
   <i><strong>Systems Analyst</strong></i>
 </p>
-<a
-  href="/portfolio/Mosqueda_Christine_CV.pdf"
-  target="_blank"
-  style="font-size:1rem; color:blue; text-decoration:underline;">
-    <i>View my CV</i>
-</a>
 `
   );
 

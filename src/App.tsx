@@ -5,7 +5,7 @@ import LoadingScreen from "./components/LoadingScreen";
 import Footer from "./components/Footer";
 import GoToTopButton from "./components/GoToTopButton";
 import Header from "./components/Header";
-// import ResumeButton from "./components/ResumeButton";
+import ResumeButton from "./components/ResumeButton";
 // import About from "./sections/About";
 import Banner from "./sections/Banner";
 import IdCard from "./sections/IdCard";
@@ -35,7 +35,7 @@ function App() {
     <>
       <Header></Header>
       <GoToTopButton></GoToTopButton>
-      {/* <ResumeButton></ResumeButton> */}
+      <ResumeButton></ResumeButton>
       <ToggleThemeButton></ToggleThemeButton>
       <Banner></Banner>
       <IdCard></IdCard>
