@@ -71,6 +71,13 @@ const projectsData = [
     description: "A retro-style CLI-based game written in Python, packaged as an .exe for Windows.",
     link: "https://github.com/cmosqueda/rock-paper-scissors-cli",
   },
+  {
+    logoSrc: favicon,
+    name: "Sulat",
+    description:
+      "Sulat is a simple text editor that mimics the functionalities of markdown editors. This is made entirely with React components.",
+    link: "https://github.com/cmosqueda/sulat",
+  },
 ];
 
 export default function Projects() {
