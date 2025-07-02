@@ -125,23 +125,41 @@ export default function Projects() {
         </div>
 
         {/* Project Cards */}
-        <div className="flex flex-wrap gap-4 my-10 mx-3 ">
+        <div className="h-[500px] sm:h-[400px] overflow-auto flex  flex-wrap gap-4 my-5 mx-3 bg-lvlfour/50 rounded-md p-5 scrollbar-thin scrollbar-thumb-lvlfive scrollbar-track-lvleight ">
           {filteredProjects.map((project, index) => (
             <div
               key={index}
-              className="txtcolor flex flex-col flex-grow  border border-lvlfive/50 rounded-lg p-5 bg-lvlone w-auto sm:w-[300px] h-auto shadow transition-transform duration-300 hover:scale-105 hover:bg-lvlfive/20"
+              className="relative flex flex-col flex-grow sm:items-start items-center rounded-lg overflow-hidden w-auto sm:w-[300px] shadow hover:scale-105 transition-transform duration-300"
             >
-              <img src={project.logoSrc} alt={project.name} className="w-16 h-16 rounded-lg object-contain mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
-              <p className="text-xs txtcolor mb-4">{project.description}</p>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto inline-block bg-lvlseven text-lvlone text-sm px-4 py-2 rounded-md font-medium sm:w-[140px] text-center hover:bg-lvlfive/80 transition-colors"
-              >
-                View Project
-              </a>
+              {/* Blurred background layer */}
+              <div
+                className="absolute inset-0 z-0 bg-cover bg-center blur-sm scale-110"
+                style={{
+                  backgroundImage: `url(${project.logoSrc})`,
+                  filter: "blur(8px)",
+                }}
+              />
+
+              {/* Optional overlay to darken */}
+              <div className="absolute inset-0 bg-black/40 z-0" />
+
+              {/* Foreground content */}
+              <div className="relative z-10 flex flex-col items-center sm:items-start p-5 w-full h-full bg-neutral-900/30 backdrop-blur-sm rounded-lg">
+                <h3 className="sm:text-xl text-lg font-semibold my-3 text-center sm:text-left text-neutral-100">
+                  {project.name}
+                </h3>
+                <p className="text-xs sm:block hidden text-neutral-100 mb-4 text-center sm:text-left">
+                  {project.description}
+                </p>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto inline-block bg-neutral-300 text-neutral-900 text-sm px-4 py-2 rounded-md font-medium sm:w-[140px] w-full text-center hover:bg-lvlfive/80 transition-colors"
+                >
+                  View Project
+                </a>
+              </div>
             </div>
           ))}
         </div>
