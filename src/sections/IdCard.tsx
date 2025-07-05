@@ -6,7 +6,7 @@ export default function IdCard() {
   const [isModalOpen, setIsModalOpen] = useState(false); // new state
 
   return (
-    <div className="my-10">
+    <section className="my-10">
       <div className="flex flex-col w-full items-center">
         <p className="text-3xl font-bold txtcolor mb-10">TINE'S ID CARD</p>
 
@@ -110,6 +110,6 @@ export default function IdCard() {
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 }

@@ -6,7 +6,7 @@ export default function About() {
   const toggleReadMore = () => setIsExpanded(!isExpanded);
 
   return (
-    <div className="flex flex-col justify-center items-center mx-5">
+    <section className="flex flex-col justify-center items-center mx-5">
       {/* <div className="flex w-full h-3 sm:h-5 my-3 bg-lvlfour"></div> */}
 
       {/* about */}
@@ -18,8 +18,8 @@ export default function About() {
         <div className="mt-3 sm:mx-0 text-sm text-justify">
           <p>
             Throughout my journey, I’ve led and contributed to various academic initiatives—currently serving as a
-            system analyst and project lead for our capstone project. In A.Y. 2024-2025, I've also taken on active roles
-            in organizations, such as <strong>ISDA Camaman-an Association</strong> and{" "}
+            systems analyst and project lead for our capstone project. In A.Y. 2024-2025, I've also taken on active
+            roles in organizations, such as <strong>ISDA Camaman-an Association</strong> and{" "}
             <strong>Andam Higala - USTP chapter</strong>, where I managed and produced publication materials that helped
             connect with broader communities. My work aims to blend clarity, creativity, collaboration, and
             communication.
@@ -52,6 +52,6 @@ export default function About() {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

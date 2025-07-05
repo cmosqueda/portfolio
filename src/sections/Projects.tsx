@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
 
 import favicon from "../assets/personal/favicon.png";
@@ -94,21 +94,20 @@ const projectsData = [
   },
 ];
 
-const categories = ["All", "Web", "Mobile", "Figma", "Desktop"];
+// const categories = ["All", "Web", "Mobile", "Figma", "Desktop"];
 
 export default function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  // const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredProjects =
-    selectedCategory === "All" ? projectsData : projectsData.filter((proj) => proj.category === selectedCategory);
+  // const filteredProjects =
+  // selectedCategory === "All" ? projectsData : projectsData.filter((proj) => proj.category === selectedCategory);
 
   return (
-    <div className="w-full px-4 py-10 bg-lvlzero text-lvlfive">
-      <div className=" mx-auto ">
-        <h2 className="text-3xl sm:text-3xl font-bold mb-6 txtcolor text-center">PROJECTS</h2>
+    <section className="w-full px-4 py-10 bg-lvlzero text-lvlfive">
+      <h2 className="text-3xl sm:text-3xl font-bold mb-6 txtcolor text-center">PROJECTS</h2>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
+      {/* Filter Buttons */}
+      {/* <div className="flex flex-wrap justify-center gap-3 mb-8">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -122,48 +121,47 @@ export default function Projects() {
               {cat}
             </button>
           ))}
-        </div>
+        </div> */}
 
-        {/* Project Cards */}
-        <div className="h-[500px] sm:h-[400px] overflow-auto flex  flex-wrap gap-4 my-5 mx-3 bg-lvlfour/50 rounded-md p-5 scrollbar-thin scrollbar-thumb-lvlfive scrollbar-track-lvleight ">
-          {filteredProjects.map((project, index) => (
+      {/* Project Cards */}
+
+      <div className="h-[500px] sm:h-[400px] overflow-auto flex flex-col flex-wrap gap-4 my-5 mx-3  rounded-md p-5 scrollbar-thin  scrollbar-thumb-lvlfive scrollbar-track-lvleight ">
+        {projectsData.map((project) => (
+          <a
+            // key={project.name}
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative flex flex-grow sm:items-start items-center rounded-lg  overflow-hidden w-auto sm:w-[300px] shadow hover:scale-105 transition-transform duration-300"
+          >
+            {/* Blurred background layer */}
             <div
-              key={index}
-              className="relative flex flex-col flex-grow sm:items-start items-center rounded-lg overflow-hidden w-auto sm:w-[300px] shadow hover:scale-105 transition-transform duration-300"
-            >
-              {/* Blurred background layer */}
-              <div
-                className="absolute inset-0 z-0 bg-cover bg-center blur-sm scale-110"
-                style={{
-                  backgroundImage: `url(${project.logoSrc})`,
-                  filter: "blur(8px)",
-                }}
-              />
+              className="absolute inset-0 z-0 bg-cover bg-center"
+              style={{
+                backgroundImage: `url(${project.logoSrc})`,
+              }}
+            />
 
-              {/* Optional overlay to darken */}
-              <div className="absolute inset-0 bg-black/40 z-0" />
-
-              {/* Foreground content */}
-              <div className="relative z-10 flex flex-col items-center sm:items-start p-5 w-full h-full bg-neutral-900/30 backdrop-blur-sm rounded-lg">
-                <h3 className="sm:text-xl text-lg font-semibold my-3 text-center sm:text-left text-neutral-100">
-                  {project.name}
-                </h3>
-                <p className="text-xs sm:block hidden text-neutral-100 mb-4 text-center sm:text-left">
-                  {project.description}
-                </p>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto inline-block bg-neutral-300 text-neutral-900 text-sm px-4 py-2 rounded-md font-medium sm:w-[140px] w-full text-center hover:bg-lvlfive/80 transition-colors"
-                >
-                  View Project
-                </a>
-              </div>
+            {/* Foreground content */}
+            <div className="relative z-10 flex flex-col items-center sm:items-start p-5 w-full h-full bg-black/40 ">
+              <h3 className="sm:text-xl text-lg font-semibold my-3 text-center sm:text-left text-neutral-100">
+                {project.name}
+              </h3>
+              <p className="text-xs sm:block hidden text-neutral-100 mb-4 text-center sm:text-left">
+                {project.description}
+              </p>
+              {/* <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto inline-block bg-neutral-300 text-neutral-900 text-sm px-4 py-2 rounded-md font-medium sm:w-[140px] w-full text-center hover:bg-lvlfive/80 transition-colors"
+              >
+                View Project
+              </a> */}
             </div>
-          ))}
-        </div>
+          </a>
+        ))}
       </div>
-    </div>
+    </section>
   );
 }
