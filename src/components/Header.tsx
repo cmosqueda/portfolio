@@ -22,11 +22,11 @@ export default function Header() {
 
     if (theme === "dark") {
       return `${baseClasses} ${
-        scrolled ? "bg-white/20  border-black/10 shadow-md" : "bg-black/20  m-5 rounded-3xl shadow-lg border-white/20"
+        scrolled ? "bg-white/20  border-black/10 shadow-md" : "bg-black/20  m-5 rounded-lg shadow-lg border-white/20"
       }`;
     } else {
       return `${baseClasses} ${
-        scrolled ? "bg-black/20  border-white/10 shadow-md" : "bg-white/20  m-5 rounded-3xl shadow-lg border-black/20"
+        scrolled ? "bg-black/20  border-white/10 shadow-md" : "bg-white/20  m-5 rounded-lg shadow-lg border-black/20"
       }`;
     }
   };

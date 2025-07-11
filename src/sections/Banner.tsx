@@ -6,6 +6,7 @@ const skillset = [
   { skill: "Creatives" },
   { skill: "Web Development" },
   { skill: "Quality Assurance" },
+  { skill: "Documentations" },
 ];
 
 export default function Banner() {
@@ -26,12 +27,12 @@ export default function Banner() {
   );
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center p-6 my-20 sm:my-5 text-white space-y-8">
+    <section className="min-h-screen flex flex-col items-center justify-center p-6 mt-20 sm:my-5 text-white space-y-8">
       {/* Dual display container */}
-      <div className="flex flex-col sm:flex-row gap-8 w-full max-w-6xl">
+      <div className="flex flex-col sm:flex-row gap-8 w-full max-w-5xl">
         {/* Input box */}
         <div className="flex flex-col w-full sm:w-1/2 space-y-2">
-          <p className="text-sm font-semibold text-lvlnine">Input</p>
+          {/* <p className="text-sm font-semibold text-lvlnine">Input</p> */}
           <div className="bg-neutral-900 border border-neutral-700 rounded-lg p-5 shadow-md font-mono text-sm relative">
             <div className="absolute top-2 left-2 flex space-x-2">
               <span className="w-3 h-3 rounded-full bg-red-500"></span>
@@ -49,7 +50,7 @@ export default function Banner() {
 
         {/* Output box */}
         <div className="flex flex-col w-full sm:w-1/2 space-y-2">
-          <p className="text-sm font-semibold text-lvlnine">Output</p>
+          {/* <p className="text-sm font-semibold text-lvlnine">Output</p> */}
           <div
             className="bg-white text-black rounded-lg p-5 shadow-md h-full max-h-64 overflow-auto scrollbar-thin scrollbar-thumb-lvlfive scrollbar-track-lvleight"
             dangerouslySetInnerHTML={{ __html: htmlCode }}

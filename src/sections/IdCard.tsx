@@ -6,14 +6,14 @@ export default function IdCard() {
   const [isModalOpen, setIsModalOpen] = useState(false); // new state
 
   return (
-    <section className="my-10">
+    <section className="mt-10">
       <div className="flex flex-col w-full items-center">
         <p className="text-3xl font-bold txtcolor mb-10">TINE'S ID CARD</p>
 
         {/* Flip container */}
         <div
           onClick={() => setFlipped(!flipped)}
-          className="cursor-pointer perspective md:w-3/6 w-5/6 transition-all h-[500px] sm:h-[350px]"
+          className="cursor-pointer perspective sm:w-xl w-[300px] transition-all h-[500px] sm:h-[350px]"
         >
           <div
             className={`relative w-full h-full transition-transform duration-700 transform-style preserve-3d ${

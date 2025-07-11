@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import GoToTopButton from "./components/GoToTopButton";
 import Header from "./components/Header";
 import ResumeButton from "./components/ResumeButton";
-// import About from "./sections/About";
+import About from "./sections/About";
 import Banner from "./sections/Banner";
 import IdCard from "./sections/IdCard";
 import Projects from "./sections/Projects";
@@ -39,7 +39,7 @@ function App() {
       <ToggleThemeButton></ToggleThemeButton>
       <Banner></Banner>
       <IdCard></IdCard>
-      {/* <About></About> */}
+      <About></About>
       <TechStacks></TechStacks>
       <Projects></Projects>
       <Footer></Footer>
